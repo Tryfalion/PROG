@@ -77,8 +77,6 @@ Under no circumstances are you allowed to jump directly into writing feature imp
 ---
 
 ## Project & Repository Conventions
-
-- The Rust backend (`backend/`) and React frontend (`frontend/`) reside in separate directories.
 - Migrations must be handled linearly in `backend/migrations/` via `sqlx-cli`.
 - Tests must be organized into `db/`, `integration_*.rs`, and `api_smoke_*.rs`.
 
