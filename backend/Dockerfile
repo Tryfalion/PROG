@@ -9,16 +9,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
-# Copy only Cargo files first for cached build of dependencies
+# Copy crate files (build context is ./backend so paths are relative here)
 COPY Cargo.toml Cargo.lock ./
-COPY backend/Cargo.toml ./
-COPY backend/src ./src
-COPY backend/migrations ./migrations
+COPY src ./src
+COPY migrations ./migrations
 
-# Build tests artifacts (do not run tests at build time; runtime executes them)
-RUN cargo build --tests --release
+# Build release to cache dependencies (tests will be run at container runtime)
+RUN cargo build --release || true
 
 WORKDIR /usr/src/backend
 
-# Default command runs the specific integration test against $DATABASE_URL
+# Default command: run the specific integration test (uses DATABASE_URL in compose)
 CMD ["bash", "-lc", "cargo test --test postgres_container_test -- --nocapture"]
