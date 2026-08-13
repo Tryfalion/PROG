@@ -34,3 +34,7 @@ Troubleshooting
 
 Notes
 - The integration test executes the migration SQL from `backend/migrations/20260623000001_core_n2_tables_and_views.sql` and uses the store helpers to insert and assert invoice status.
+
+How to run:
+cd to PROG/backend
+./run-tests-in-docker.sh
