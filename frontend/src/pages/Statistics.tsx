@@ -1,38 +1,43 @@
 import React from 'react';
+import { useInvoicesAndTransactions } from '../hooks/useInvoicesAndTransactions';
 
-// Basis Component für Grid Layout der Spezifikation
+// Zeigt reale Kennzahlen aus dem Backend an (Spec 009), statt der ursprünglichen Mock-Werte.
 export const Statistics: React.FC = () => {
-  // Statische Demodaten wie gefordert für das Layout 
-  const stats = {
-    totalInvoices: 120,
-    totalTransactions: 305,
-    paidCount: 105,
-    openCount: 15,
-    amountPaid: '45,210.00 EUR',
-    amountOpen: '3,450.50 EUR'
-  };
+  const { invoices, transactions, error } = useInvoicesAndTransactions();
+
+  const paidCount = invoices.filter((inv) => inv.status === 'Paid').length;
+  const overpaidCount = invoices.filter((inv) => inv.status === 'Overpaid').length;
+  const openCount = invoices.filter((inv) => inv.status === 'Open').length;
+  const amountPaid = invoices
+    .filter((inv) => inv.status === 'Paid' || inv.status === 'Overpaid')
+    .reduce((sum, inv) => sum + Number(inv.amount), 0);
+  const amountOpen = invoices
+    .filter((inv) => inv.status === 'Open')
+    .reduce((sum, inv) => sum + Number(inv.amount), 0);
 
   return (
     <div>
       <h1 style={{ color: 'var(--color-secondary-blue)' }}>Finanz-Statistiken</h1>
-      
+      {error && <p className="upload-error">Verbindung zum Backend fehlgeschlagen: {error}</p>}
+
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
         <div className="card">
           <h3>Rechnungsvolumen</h3>
-          <p>Gesamt: <b>{stats.totalInvoices}</b></p>
-          <p>Bezahlt: <span style={{ color: 'var(--status-paid)' }}>{stats.paidCount}</span></p>
-          <p>Offen: <span style={{ color: 'var(--status-open)' }}>{stats.openCount}</span></p>
+          <p>Gesamt: <b>{invoices.length}</b></p>
+          <p>Bezahlt: <span style={{ color: 'var(--status-paid)' }}>{paidCount}</span></p>
+          <p>Überzahlt: <span style={{ color: 'var(--status-warn)' }}>{overpaidCount}</span></p>
+          <p>Offen: <span style={{ color: 'var(--status-open)' }}>{openCount}</span></p>
         </div>
 
         <div className="card">
           <h3>Zahlungsvolumen</h3>
-          <p>Eingänge: <b>{stats.totalTransactions}</b></p>
+          <p>Eingänge: <b>{transactions.length}</b></p>
         </div>
 
         <div className="card">
           <h3>Monetäre Übersicht</h3>
-          <p>Eingenommen: <b>{stats.amountPaid}</b></p>
-          <p>Austehend: <span style={{ color: 'var(--status-open)' }}>{stats.amountOpen}</span></p>
+          <p>Eingenommen: <b>{amountPaid.toFixed(2)} EUR</b></p>
+          <p>Ausstehend: <span style={{ color: 'var(--status-open)' }}>{amountOpen.toFixed(2)} EUR</span></p>
         </div>
       </div>
     </div>
