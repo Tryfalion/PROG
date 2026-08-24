@@ -11,7 +11,7 @@ pub async fn setup_pool() -> PgPool {
         connect_with_retry(&db_url).await
     } else {
         let docker = testcontainers::clients::Cli::default();
-        let postgres_image = testcontainers::images::postgres::Postgres::default();
+        let postgres_image = testcontainers_modules::postgres::Postgres::default();
         let node = docker.run(postgres_image);
         let port = node.get_host_port_ipv4(5432);
         // WICHTIG: `node` muss für die Laufzeit des Tests am Leben bleiben, sonst wird
@@ -44,19 +44,24 @@ async fn apply_migration(pool: &PgPool) {
     let migration_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("migrations/20260623000001_core_n2_tables_and_views.sql");
     let sql = tokio::fs::read_to_string(&migration_path).await.expect("migration file must exist");
-    for stmt in sql.split(';') {
+
+    for (idx, stmt) in sql.split(';').enumerate() {
         let s = stmt.trim();
         if s.is_empty() || s.starts_with("--") {
             continue;
         }
-        // Migration ist idempotent genug ausgelegt für Testläufe: Ignoriere "already exists".
-        let _ = sqlx::query(s).execute(pool).await;
+
+        sqlx::query(s)
+            .execute(pool)
+            .await
+            .unwrap_or_else(|e| panic!("migration statement {} failed: {}\nSQL: {}", idx, e, s));
     }
 }
 
 /// Leert alle Fakt-Tabellen, damit jeder Test mit einem sauberen Stand beginnt.
 async fn reset_tables(pool: &PgPool) {
-    let _ = sqlx::query("TRUNCATE allocations, bank_transactions, invoices RESTART IDENTITY CASCADE")
+    sqlx::query("TRUNCATE allocations, bank_transactions, invoices RESTART IDENTITY CASCADE")
         .execute(pool)
-        .await;
+        .await
+        .unwrap_or_else(|e| panic!("reset_tables failed: {e}"));
 }
