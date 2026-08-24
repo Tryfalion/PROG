@@ -1,7 +1,7 @@
 use rust_decimal::Decimal;
 use uuid::Uuid;
 
-use super::models::{BankTransaction, Currency, Invoice};
+use super::models::{BankTransaction, Invoice};
 
 /// Repräsentiert die Zuweisung eines Betrags von einer Transaktion zu einer Rechnung.
 #[derive(Debug, Clone, PartialEq, Eq)]

@@ -46,15 +46,22 @@ async fn apply_migration(pool: &PgPool) {
     let sql = tokio::fs::read_to_string(&migration_path).await.expect("migration file must exist");
 
     for (idx, stmt) in sql.split(';').enumerate() {
-        let s = stmt.trim();
-        if s.is_empty() || s.starts_with("--") {
+        let sanitized = stmt
+            .lines()
+            .filter(|line| !line.trim_start().starts_with("--"))
+            .collect::<Vec<_>>()
+            .join("\n")
+            .trim()
+            .to_string();
+
+        if sanitized.is_empty() {
             continue;
         }
 
-        sqlx::query(s)
+        sqlx::query(&sanitized)
             .execute(pool)
             .await
-            .unwrap_or_else(|e| panic!("migration statement {} failed: {}\nSQL: {}", idx, e, s));
+            .unwrap_or_else(|e| panic!("migration statement {} failed: {}\nSQL: {}", idx, e, sanitized));
     }
 }
 
