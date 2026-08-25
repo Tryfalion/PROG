@@ -1,0 +1,8 @@
+# Frontend dependencies and build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+frontend/package-lock.json
+
+# Rust build artifacts
+backend/target/

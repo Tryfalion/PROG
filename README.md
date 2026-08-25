@@ -10,11 +10,11 @@ kleine Teams. Rust/Axum-Backend (N2-Architektur, PostgreSQL, WebSockets) + React
 docker compose up -d postgres
 cd backend && DATABASE_URL="postgres://postgres:postgres@localhost:5432/postgres" cargo run
 
-# 2. Frontend (separates Terminal) — `npm install` ist zwingend, sonst meldet der Editor
-#    "Cannot find module 'react'" etc., weil node_modules/ dann fehlt.
+# 2. Frontend (separates Terminal) — `corepack pnpm install` ist zwingend,
+#    sonst meldet der Editor "Cannot find module 'react'" etc., weil node_modules/ dann fehlt.
 cd frontend
-npm install
-npm run dev
+corepack pnpm install
+corepack pnpm run dev
 ```
 
 Danach ist das Frontend unter `http://localhost:5173` erreichbar, das Backend unter
