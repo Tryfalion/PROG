@@ -11,7 +11,7 @@ Dieses Handbuch beschreibt, wie LedgerGate installiert, konfiguriert und betrieb
 ## 2. Backend + Datenbank starten (Docker)
 
 ```bash
-# Startet Postgres und führt die komplette Testsuite gegen eine echte DB aus
+# Startet Postgres und führt die komplette Testsuite gegen eine echte DB aus mit git
 ./backend/run-tests-in-docker.sh
 ```
 
