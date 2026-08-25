@@ -17,6 +17,9 @@ const reconciliationLabel = (status: InvoiceDto['status']): { text: string; clas
   }
 };
 
+/** Formatiert Beträge einheitlich auf maximal 2 Nachkommastellen (Cent-Genauigkeit). */
+const formatAmount = (value: string | number): string => Number(value).toFixed(2);
+
 export const LiveProcess: React.FC = () => {
   const { invoices, transactions, error } = useInvoicesAndTransactions();
   const [invoiceSearch, setInvoiceSearch] = useState('');
@@ -75,7 +78,7 @@ export const LiveProcess: React.FC = () => {
                   <b>{inv.invoice_number}</b>
                   <div className="ledger-sub">Fällig: {inv.due_date}</div>
                 </div>
-                <div>{inv.amount} {inv.currency}</div>
+                <div>{formatAmount(inv.amount)} {inv.currency}</div>
               </li>
             ))}
             {filteredInvoices.length === 0 && <li className="ledger-empty">Keine Rechnungen gefunden.</li>}
@@ -97,7 +100,7 @@ export const LiveProcess: React.FC = () => {
                   <b>{tx.reference_text}</b>
                   <div className="ledger-sub">{tx.counterparty_name ?? 'Unbekannter Absender'}</div>
                 </div>
-                <div>{tx.amount} {tx.currency}</div>
+                <div>{formatAmount(tx.amount)} {tx.currency}</div>
               </li>
             ))}
             {transactions.length === 0 && <li className="ledger-empty">Keine Zahlungen gefunden.</li>}
@@ -110,10 +113,12 @@ export const LiveProcess: React.FC = () => {
           <ul className="ledger-list">
             {invoices.map((inv) => {
               const label = reconciliationLabel(inv.status);
+              const unresolvedBalance = Number(inv.amount) - Number(inv.paid_amount);
               return (
                 <li key={inv.id} className="reconciliation-card">
                   <span className={`status-badge ${label.className}`}>{label.text}</span>
-                  <div className="ledger-sub">{inv.invoice_number} — {inv.amount} {inv.currency}</div>
+                  <div className="ledger-sub">{inv.invoice_number} — {formatAmount(inv.amount)} {inv.currency}</div>
+                  <div className="ledger-sub">Offener Saldo: {formatAmount(unresolvedBalance)} {inv.currency}</div>
                 </li>
               );
             })}

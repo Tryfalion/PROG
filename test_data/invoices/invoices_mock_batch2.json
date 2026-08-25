@@ -1,0 +1,702 @@
+[
+  {
+    "invoice_number": "RE-2026-003",
+    "issue_date": "2026-01-06",
+    "due_date": "2026-01-20",
+    "amount": "932.46",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-004",
+    "issue_date": "2026-02-01",
+    "due_date": "2026-02-15",
+    "amount": "902.17",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-005",
+    "issue_date": "2026-03-18",
+    "due_date": "2026-04-01",
+    "amount": "100.45",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-006",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-07",
+    "amount": "256.95",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-007",
+    "issue_date": "2026-05-23",
+    "due_date": "2026-06-06",
+    "amount": "252.34",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-008",
+    "issue_date": "2026-06-12",
+    "due_date": "2026-06-26",
+    "amount": "533.94",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-009",
+    "issue_date": "2026-07-18",
+    "due_date": "2026-08-01",
+    "amount": "685.20",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-010",
+    "issue_date": "2026-08-09",
+    "due_date": "2026-08-23",
+    "amount": "707.42",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-011",
+    "issue_date": "2026-09-08",
+    "due_date": "2026-09-22",
+    "amount": "247.11",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-012",
+    "issue_date": "2026-10-24",
+    "due_date": "2026-11-07",
+    "amount": "736.65",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-013",
+    "issue_date": "2026-11-09",
+    "due_date": "2026-11-23",
+    "amount": "888.15",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-014",
+    "issue_date": "2026-12-04",
+    "due_date": "2026-12-18",
+    "amount": "286.49",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-015",
+    "issue_date": "2026-01-26",
+    "due_date": "2026-02-09",
+    "amount": "649.52",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-016",
+    "issue_date": "2026-02-02",
+    "due_date": "2026-02-16",
+    "amount": "342.02",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-017",
+    "issue_date": "2026-03-14",
+    "due_date": "2026-03-28",
+    "amount": "612.05",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-018",
+    "issue_date": "2026-04-17",
+    "due_date": "2026-05-01",
+    "amount": "156.20",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-019",
+    "issue_date": "2026-05-17",
+    "due_date": "2026-05-31",
+    "amount": "148.17",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-020",
+    "issue_date": "2026-06-16",
+    "due_date": "2026-06-30",
+    "amount": "675.22",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-021",
+    "issue_date": "2026-07-22",
+    "due_date": "2026-08-05",
+    "amount": "451.98",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-022",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-22",
+    "amount": "76.55",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-023",
+    "issue_date": "2026-09-13",
+    "due_date": "2026-09-27",
+    "amount": "838.98",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-024",
+    "issue_date": "2026-10-04",
+    "due_date": "2026-10-18",
+    "amount": "896.00",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-025",
+    "issue_date": "2026-11-16",
+    "due_date": "2026-11-30",
+    "amount": "864.44",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-026",
+    "issue_date": "2026-12-13",
+    "due_date": "2026-12-27",
+    "amount": "176.08",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-027",
+    "issue_date": "2026-01-11",
+    "due_date": "2026-01-25",
+    "amount": "330.41",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-028",
+    "issue_date": "2026-02-09",
+    "due_date": "2026-02-23",
+    "amount": "854.12",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-029",
+    "issue_date": "2026-03-13",
+    "due_date": "2026-03-27",
+    "amount": "296.04",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-030",
+    "issue_date": "2026-04-01",
+    "due_date": "2026-04-15",
+    "amount": "956.26",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-031",
+    "issue_date": "2026-05-12",
+    "due_date": "2026-05-26",
+    "amount": "288.71",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-032",
+    "issue_date": "2026-06-18",
+    "due_date": "2026-07-02",
+    "amount": "496.08",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-033",
+    "issue_date": "2026-07-23",
+    "due_date": "2026-08-06",
+    "amount": "738.54",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-034",
+    "issue_date": "2026-08-07",
+    "due_date": "2026-08-21",
+    "amount": "381.90",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-035",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-11",
+    "amount": "225.82",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-036",
+    "issue_date": "2026-10-04",
+    "due_date": "2026-10-18",
+    "amount": "644.77",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-037",
+    "issue_date": "2026-11-16",
+    "due_date": "2026-11-30",
+    "amount": "951.46",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-038",
+    "issue_date": "2026-12-18",
+    "due_date": "2027-01-01",
+    "amount": "941.15",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-039",
+    "issue_date": "2026-01-18",
+    "due_date": "2026-02-01",
+    "amount": "821.61",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-040",
+    "issue_date": "2026-02-17",
+    "due_date": "2026-03-03",
+    "amount": "598.21",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-041",
+    "issue_date": "2026-03-24",
+    "due_date": "2026-04-07",
+    "amount": "95.70",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-042",
+    "issue_date": "2026-04-02",
+    "due_date": "2026-04-16",
+    "amount": "466.31",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-043",
+    "issue_date": "2026-05-21",
+    "due_date": "2026-06-04",
+    "amount": "464.67",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-044",
+    "issue_date": "2026-06-27",
+    "due_date": "2026-07-11",
+    "amount": "759.94",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-045",
+    "issue_date": "2026-07-22",
+    "due_date": "2026-08-05",
+    "amount": "35.99",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-046",
+    "issue_date": "2026-08-09",
+    "due_date": "2026-08-23",
+    "amount": "996.67",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-047",
+    "issue_date": "2026-09-11",
+    "due_date": "2026-09-25",
+    "amount": "553.85",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-048",
+    "issue_date": "2026-10-27",
+    "due_date": "2026-11-10",
+    "amount": "799.68",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-049",
+    "issue_date": "2026-11-10",
+    "due_date": "2026-11-24",
+    "amount": "334.04",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-050",
+    "issue_date": "2026-12-16",
+    "due_date": "2026-12-30",
+    "amount": "909.84",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-051",
+    "issue_date": "2026-01-18",
+    "due_date": "2026-02-01",
+    "amount": "715.75",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-052",
+    "issue_date": "2026-02-23",
+    "due_date": "2026-03-09",
+    "amount": "556.91",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-053",
+    "issue_date": "2026-03-24",
+    "due_date": "2026-04-07",
+    "amount": "647.02",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-054",
+    "issue_date": "2026-04-10",
+    "due_date": "2026-04-24",
+    "amount": "253.29",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-055",
+    "issue_date": "2026-05-05",
+    "due_date": "2026-05-19",
+    "amount": "72.73",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-056",
+    "issue_date": "2026-06-27",
+    "due_date": "2026-07-11",
+    "amount": "58.52",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-057",
+    "issue_date": "2026-07-07",
+    "due_date": "2026-07-21",
+    "amount": "779.07",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-058",
+    "issue_date": "2026-08-20",
+    "due_date": "2026-09-03",
+    "amount": "974.08",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-059",
+    "issue_date": "2026-09-22",
+    "due_date": "2026-10-06",
+    "amount": "804.77",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-060",
+    "issue_date": "2026-10-14",
+    "due_date": "2026-10-28",
+    "amount": "530.34",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-061",
+    "issue_date": "2026-11-03",
+    "due_date": "2026-11-17",
+    "amount": "386.91",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-062",
+    "issue_date": "2026-12-21",
+    "due_date": "2027-01-04",
+    "amount": "368.43",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-063",
+    "issue_date": "2026-01-01",
+    "due_date": "2026-01-15",
+    "amount": "434.70",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-064",
+    "issue_date": "2026-02-25",
+    "due_date": "2026-03-11",
+    "amount": "438.07",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-065",
+    "issue_date": "2026-03-04",
+    "due_date": "2026-03-18",
+    "amount": "396.28",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-066",
+    "issue_date": "2026-04-05",
+    "due_date": "2026-04-19",
+    "amount": "93.41",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-067",
+    "issue_date": "2026-05-24",
+    "due_date": "2026-06-07",
+    "amount": "547.63",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-068",
+    "issue_date": "2026-06-02",
+    "due_date": "2026-06-16",
+    "amount": "406.48",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-069",
+    "issue_date": "2026-07-22",
+    "due_date": "2026-08-05",
+    "amount": "763.31",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-070",
+    "issue_date": "2026-08-09",
+    "due_date": "2026-08-23",
+    "amount": "469.80",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-071",
+    "issue_date": "2026-09-11",
+    "due_date": "2026-09-25",
+    "amount": "888.53",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-072",
+    "issue_date": "2026-10-17",
+    "due_date": "2026-10-31",
+    "amount": "56.51",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-073",
+    "issue_date": "2026-11-19",
+    "due_date": "2026-12-03",
+    "amount": "749.62",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-074",
+    "issue_date": "2026-12-24",
+    "due_date": "2027-01-07",
+    "amount": "929.57",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-075",
+    "issue_date": "2026-01-08",
+    "due_date": "2026-01-22",
+    "amount": "597.49",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-076",
+    "issue_date": "2026-02-12",
+    "due_date": "2026-02-26",
+    "amount": "359.83",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-077",
+    "issue_date": "2026-03-13",
+    "due_date": "2026-03-27",
+    "amount": "881.56",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-078",
+    "issue_date": "2026-04-21",
+    "due_date": "2026-05-05",
+    "amount": "321.02",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-079",
+    "issue_date": "2026-05-13",
+    "due_date": "2026-05-27",
+    "amount": "981.19",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-080",
+    "issue_date": "2026-06-25",
+    "due_date": "2026-07-09",
+    "amount": "990.78",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-081",
+    "issue_date": "2026-07-18",
+    "due_date": "2026-08-01",
+    "amount": "537.95",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-082",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-22",
+    "amount": "894.21",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-083",
+    "issue_date": "2026-09-26",
+    "due_date": "2026-10-10",
+    "amount": "785.10",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-084",
+    "issue_date": "2026-10-22",
+    "due_date": "2026-11-05",
+    "amount": "921.66",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-085",
+    "issue_date": "2026-11-27",
+    "due_date": "2026-12-11",
+    "amount": "600.10",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-086",
+    "issue_date": "2026-12-15",
+    "due_date": "2026-12-29",
+    "amount": "687.64",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-087",
+    "issue_date": "2026-01-14",
+    "due_date": "2026-01-28",
+    "amount": "169.65",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-088",
+    "issue_date": "2026-02-16",
+    "due_date": "2026-03-02",
+    "amount": "548.31",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-089",
+    "issue_date": "2026-03-03",
+    "due_date": "2026-03-17",
+    "amount": "934.69",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-090",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-07",
+    "amount": "943.46",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-091",
+    "issue_date": "2026-05-12",
+    "due_date": "2026-05-26",
+    "amount": "60.08",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-092",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-17",
+    "amount": "298.42",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-093",
+    "issue_date": "2026-07-11",
+    "due_date": "2026-07-25",
+    "amount": "619.01",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-094",
+    "issue_date": "2026-08-26",
+    "due_date": "2026-09-09",
+    "amount": "340.35",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-095",
+    "issue_date": "2026-09-25",
+    "due_date": "2026-10-09",
+    "amount": "91.92",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-096",
+    "issue_date": "2026-10-16",
+    "due_date": "2026-10-30",
+    "amount": "974.37",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-097",
+    "issue_date": "2026-11-01",
+    "due_date": "2026-11-15",
+    "amount": "124.14",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-098",
+    "issue_date": "2026-12-04",
+    "due_date": "2026-12-18",
+    "amount": "968.23",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-099",
+    "issue_date": "2026-01-09",
+    "due_date": "2026-01-23",
+    "amount": "791.65",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-100",
+    "issue_date": "2026-02-22",
+    "due_date": "2026-03-08",
+    "amount": "834.19",
+    "currency": "EUR"
+  },
+  {
+    "invoice_number": "RE-2026-101",
+    "issue_date": "2026-03-19",
+    "due_date": "2026-04-02",
+    "amount": "935.19",
+    "currency": "USD"
+  },
+  {
+    "invoice_number": "RE-2026-102",
+    "issue_date": "2026-04-08",
+    "due_date": "2026-04-22",
+    "amount": "469.86",
+    "currency": "EUR"
+  }
+]

@@ -1,3 +1,6 @@
+use std::collections::HashMap;
+
+use rust_decimal::Decimal;
 use sqlx::{PgPool, Row};
 use uuid::Uuid;
 
@@ -157,6 +160,29 @@ pub async fn get_invoices_with_status(pool: &PgPool) -> Result<Vec<(Invoice, Inv
         };
 
         result.push((inv, status));
+    }
+    Ok(result)
+}
+
+/// Liest je Rechnung die Summe der bisher zugewiesenen Zahlungen (Spec 006/009).
+/// Wird gebraucht, um bei Teilzahlungen den tatsächlich noch offenen Betrag
+/// (Rechnungsbetrag - bereits zugewiesener Betrag) berechnen zu können.
+pub async fn get_allocated_totals(pool: &PgPool) -> Result<HashMap<Uuid, Decimal>, sqlx::Error> {
+    let rows = sqlx::query(
+        r#"
+        SELECT invoice_id, SUM(allocated_amount) AS total_allocated
+        FROM allocations
+        GROUP BY invoice_id
+        "#
+    )
+    .fetch_all(pool)
+    .await?;
+
+    let mut result = HashMap::new();
+    for row in rows {
+        let invoice_id: Uuid = row.get("invoice_id");
+        let total_allocated: Decimal = row.get("total_allocated");
+        result.insert(invoice_id, total_allocated);
     }
     Ok(result)
 }

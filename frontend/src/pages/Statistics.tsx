@@ -8,12 +8,14 @@ export const Statistics: React.FC = () => {
   const paidCount = invoices.filter((inv) => inv.status === 'Paid').length;
   const overpaidCount = invoices.filter((inv) => inv.status === 'Overpaid').length;
   const openCount = invoices.filter((inv) => inv.status === 'Open').length;
-  const amountPaid = invoices
-    .filter((inv) => inv.status === 'Paid' || inv.status === 'Overpaid')
-    .reduce((sum, inv) => sum + Number(inv.amount), 0);
+  // "Eingenommen" = tatsächlich zugewiesene Beträge über alle Rechnungen hinweg,
+  // damit auch Teilzahlungen offener Rechnungen mitgezählt werden (nicht nur volle Zahlungen).
+  const amountPaid = invoices.reduce((sum, inv) => sum + (Number(inv.paid_amount) || 0), 0);
+  // Teilzahlungen mindern den offenen Betrag: nur (Rechnungsbetrag - bereits Zugewiesenes) zählt als ausstehend.
+  // Number(undefined) fällt auf 0 zurück, falls ein älteres Backend ohne paid_amount läuft.
   const amountOpen = invoices
     .filter((inv) => inv.status === 'Open')
-    .reduce((sum, inv) => sum + Number(inv.amount), 0);
+    .reduce((sum, inv) => sum + (Number(inv.amount) - (Number(inv.paid_amount) || 0)), 0);
 
   return (
     <div>

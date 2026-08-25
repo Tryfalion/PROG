@@ -11,6 +11,8 @@ export interface InvoiceDto {
   amount: string;
   currency: Currency;
   status: InvoiceStatusLabel;
+  /** Summe der bisher zugewiesenen Zahlungen (Spec 009, für Teilzahlungen). */
+  paid_amount: string;
 }
 
 export interface TransactionDto {

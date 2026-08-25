@@ -14,6 +14,8 @@ pub struct InvoiceView {
     pub amount: String,
     pub currency: String,
     pub status: String,
+    /// Summe der bereits zugewiesenen Zahlungen (0 bei fehlenden Allocations, Spec 009).
+    pub paid_amount: String,
 }
 
 /// Response-DTO für eine Banktransaktion.
@@ -36,16 +38,24 @@ fn currency_label(c: &crate::problemraum::models::Currency) -> String {
 /// Handler für 'GET /api/v1/invoices' (Spec 005): liefert alle Rechnungen mit N2-Status.
 pub async fn list_invoices_handler(State(pool): State<PgPool>) -> Json<Vec<InvoiceView>> {
     let rows = store::get_invoices_with_status(&pool).await.unwrap_or_default();
+    let allocated_totals = store::get_allocated_totals(&pool).await.unwrap_or_default();
     let views = rows
         .into_iter()
-        .map(|(inv, status)| InvoiceView {
-            id: inv.id.to_string(),
-            invoice_number: inv.invoice_number,
-            issue_date: inv.issue_date.to_string(),
-            due_date: inv.due_date.to_string(),
-            amount: inv.amount.to_string(),
-            currency: currency_label(&inv.currency),
-            status: format!("{:?}", status),
+        .map(|(inv, status)| {
+            let paid_amount = allocated_totals
+                .get(&inv.id)
+                .copied()
+                .unwrap_or(rust_decimal::Decimal::ZERO);
+            InvoiceView {
+                id: inv.id.to_string(),
+                invoice_number: inv.invoice_number,
+                issue_date: inv.issue_date.to_string(),
+                due_date: inv.due_date.to_string(),
+                amount: inv.amount.to_string(),
+                currency: currency_label(&inv.currency),
+                status: format!("{:?}", status),
+                paid_amount: paid_amount.to_string(),
+            }
         })
         .collect();
     Json(views)
