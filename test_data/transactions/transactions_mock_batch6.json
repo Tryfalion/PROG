@@ -1,0 +1,378 @@
+[
+  {
+    "booking_date": "2026-10-11",
+    "value_date": "2026-10-11",
+    "amount": "404.72",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-213",
+    "counterparty_name": "Hannah Wolf"
+  },
+  {
+    "booking_date": "2026-02-13",
+    "value_date": "2026-02-13",
+    "amount": "560.80",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-469",
+    "counterparty_name": "Mia Hoffmann"
+  },
+  {
+    "booking_date": "2026-06-21",
+    "value_date": "2026-06-21",
+    "amount": "950.47",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-245",
+    "counterparty_name": "Hannah Wolf"
+  },
+  {
+    "booking_date": "2026-01-10",
+    "value_date": "2026-01-10",
+    "amount": "83.63",
+    "currency": "USD",
+    "reference_text": "Teilzahlung RE-2026-312",
+    "counterparty_name": "Mia Hoffmann"
+  },
+  {
+    "booking_date": "2026-04-02",
+    "value_date": "2026-04-02",
+    "amount": "824.39",
+    "currency": "USD",
+    "reference_text": "Zahlung fuer RE-2026-182",
+    "counterparty_name": "Ida Hartmann"
+  },
+  {
+    "booking_date": "2026-07-17",
+    "value_date": "2026-07-17",
+    "amount": "300.36",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-450",
+    "counterparty_name": "Mia Hoffmann"
+  },
+  {
+    "booking_date": "2026-02-26",
+    "value_date": "2026-02-26",
+    "amount": "891.79",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-133",
+    "counterparty_name": "Leon Schulz"
+  },
+  {
+    "booking_date": "2026-08-21",
+    "value_date": "2026-08-21",
+    "amount": "116.58",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-307",
+    "counterparty_name": "Hannah Wolf"
+  },
+  {
+    "booking_date": "2026-04-18",
+    "value_date": "2026-04-18",
+    "amount": "81.19",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-471",
+    "counterparty_name": "Finn Klein"
+  },
+  {
+    "booking_date": "2026-04-25",
+    "value_date": "2026-04-25",
+    "amount": "923.47",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-279",
+    "counterparty_name": "Anna Schmidt"
+  },
+  {
+    "booking_date": "2026-03-16",
+    "value_date": "2026-03-16",
+    "amount": "289.76",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-206",
+    "counterparty_name": "Laura Wagner"
+  },
+  {
+    "booking_date": "2026-12-31",
+    "value_date": "2026-12-31",
+    "amount": "978.88",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-263",
+    "counterparty_name": "Emma Koch"
+  },
+  {
+    "booking_date": "2026-04-22",
+    "value_date": "2026-04-22",
+    "amount": "655.24",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-363",
+    "counterparty_name": "Emma Koch"
+  },
+  {
+    "booking_date": "2026-02-04",
+    "value_date": "2026-02-04",
+    "amount": "596.36",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-264",
+    "counterparty_name": "Laura Wagner"
+  },
+  {
+    "booking_date": "2026-11-12",
+    "value_date": "2026-11-12",
+    "amount": "297.00",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-178",
+    "counterparty_name": "Lea Richter"
+  },
+  {
+    "booking_date": "2026-03-24",
+    "value_date": "2026-03-24",
+    "amount": "499.43",
+    "currency": "USD",
+    "reference_text": "Ueberweisung fuer RE-2026-398",
+    "counterparty_name": "Lea Richter"
+  },
+  {
+    "booking_date": "2026-05-03",
+    "value_date": "2026-05-03",
+    "amount": "127.69",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-447",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-06-05",
+    "value_date": "2026-06-05",
+    "amount": "657.89",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-317",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-07-17",
+    "value_date": "2026-07-17",
+    "amount": "788.96",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-450",
+    "counterparty_name": "Anna Schmidt"
+  },
+  {
+    "booking_date": "2027-01-04",
+    "value_date": "2027-01-04",
+    "amount": "46.17",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-455",
+    "counterparty_name": "Max Mustermann"
+  },
+  {
+    "booking_date": "2026-02-03",
+    "value_date": "2026-02-03",
+    "amount": "309.27",
+    "currency": "USD",
+    "reference_text": "Zahlung fuer RE-2026-156",
+    "counterparty_name": "Ben Krueger"
+  },
+  {
+    "booking_date": "2026-05-28",
+    "value_date": "2026-05-28",
+    "amount": "222.61",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-328",
+    "counterparty_name": "Noah Neumann"
+  },
+  {
+    "booking_date": "2026-06-24",
+    "value_date": "2026-06-24",
+    "amount": "425.67",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-185",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-08-28",
+    "value_date": "2026-08-28",
+    "amount": "70.11",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-331",
+    "counterparty_name": "Laura Wagner"
+  },
+  {
+    "booking_date": "2026-10-28",
+    "value_date": "2026-10-28",
+    "amount": "250.31",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-333",
+    "counterparty_name": "Hannah Wolf"
+  },
+  {
+    "booking_date": "2026-04-02",
+    "value_date": "2026-04-02",
+    "amount": "871.01",
+    "currency": "USD",
+    "reference_text": "Zahlung fuer RE-2026-374",
+    "counterparty_name": "Lina Schwarz"
+  },
+  {
+    "booking_date": "2026-12-29",
+    "value_date": "2026-12-29",
+    "amount": "27.43",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-227",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-04-30",
+    "value_date": "2026-04-30",
+    "amount": "76.00",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-135",
+    "counterparty_name": "Lukas Weber"
+  },
+  {
+    "booking_date": "2026-05-31",
+    "value_date": "2026-05-31",
+    "amount": "338.85",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-412",
+    "counterparty_name": "Finn Klein"
+  },
+  {
+    "booking_date": "2026-03-24",
+    "value_date": "2026-03-24",
+    "amount": "271.75",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-422",
+    "counterparty_name": "Anna Schmidt"
+  },
+  {
+    "booking_date": "2026-02-16",
+    "value_date": "2026-02-16",
+    "amount": "624.19",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-313",
+    "counterparty_name": "Ida Hartmann"
+  },
+  {
+    "booking_date": "2026-11-23",
+    "value_date": "2026-11-23",
+    "amount": "41.72",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-106",
+    "counterparty_name": "Lukas Weber"
+  },
+  {
+    "booking_date": "2026-11-18",
+    "value_date": "2026-11-18",
+    "amount": "211.09",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-142",
+    "counterparty_name": "Elias Zimmermann"
+  },
+  {
+    "booking_date": "2026-08-10",
+    "value_date": "2026-08-10",
+    "amount": "355.23",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-355",
+    "counterparty_name": "Noah Neumann"
+  },
+  {
+    "booking_date": "2026-03-15",
+    "value_date": "2026-03-15",
+    "amount": "846.74",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-170",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-06-07",
+    "value_date": "2026-06-07",
+    "amount": "961.00",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-233",
+    "counterparty_name": "Hannah Wolf"
+  },
+  {
+    "booking_date": "2026-11-29",
+    "value_date": "2026-11-29",
+    "amount": "267.08",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-190",
+    "counterparty_name": "Noah Neumann"
+  },
+  {
+    "booking_date": "2026-07-14",
+    "value_date": "2026-07-14",
+    "amount": "900.59",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-150",
+    "counterparty_name": "Mia Hoffmann"
+  },
+  {
+    "booking_date": "2026-12-15",
+    "value_date": "2026-12-15",
+    "amount": "323.73",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-239",
+    "counterparty_name": "Lina Schwarz"
+  },
+  {
+    "booking_date": "2026-02-12",
+    "value_date": "2026-02-12",
+    "amount": "365.87",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-193",
+    "counterparty_name": "Marie Braun"
+  },
+  {
+    "booking_date": "2026-12-03",
+    "value_date": "2026-12-03",
+    "amount": "168.36",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-382",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-03-12",
+    "value_date": "2026-03-12",
+    "amount": "1003.95",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-230",
+    "counterparty_name": "Noah Neumann"
+  },
+  {
+    "booking_date": "2026-06-30",
+    "value_date": "2026-06-30",
+    "amount": "829.48",
+    "currency": "EUR",
+    "reference_text": "Zahlung fuer RE-2026-377",
+    "counterparty_name": "Ida Hartmann"
+  },
+  {
+    "booking_date": "2026-06-22",
+    "value_date": "2026-06-22",
+    "amount": "86.83",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-269",
+    "counterparty_name": "Mia Hoffmann"
+  },
+  {
+    "booking_date": "2026-09-15",
+    "value_date": "2026-09-15",
+    "amount": "430.09",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-104",
+    "counterparty_name": "Sophie Fischer"
+  },
+  {
+    "booking_date": "2026-02-06",
+    "value_date": "2026-02-06",
+    "amount": "417.65",
+    "currency": "EUR",
+    "reference_text": "Ueberweisung fuer RE-2026-193",
+    "counterparty_name": "Lukas Weber"
+  },
+  {
+    "booking_date": "2026-04-19",
+    "value_date": "2026-04-19",
+    "amount": "207.36",
+    "currency": "EUR",
+    "reference_text": "Teilzahlung RE-2026-327",
+    "counterparty_name": "Lina Schwarz"
+  }
+]

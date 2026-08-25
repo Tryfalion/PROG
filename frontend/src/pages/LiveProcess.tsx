@@ -20,14 +20,30 @@ const reconciliationLabel = (status: InvoiceDto['status']): { text: string; clas
 /** Formatiert Beträge einheitlich auf maximal 2 Nachkommastellen (Cent-Genauigkeit). */
 const formatAmount = (value: string | number): string => Number(value).toFixed(2);
 
+/** Filter-Optionen für das Reconciliation Board: 'all' zeigt wieder alle Rechnungen. */
+type ReconciliationFilter = 'all' | InvoiceDto['status'];
+
+const reconciliationFilters: { filter: ReconciliationFilter; label: string; className: string }[] = [
+  { filter: 'Paid', label: 'Perfect Match', className: 'status-paid' },
+  { filter: 'Open', label: 'Open / Unpaid', className: 'status-open' },
+  { filter: 'Overpaid', label: 'Overpayment', className: 'status-warn' },
+];
+
 export const LiveProcess: React.FC = () => {
   const { invoices, transactions, error } = useInvoicesAndTransactions();
   const [invoiceSearch, setInvoiceSearch] = useState('');
   const [modalKind, setModalKind] = useState<'invoice' | 'payment' | null>(null);
+  const [reconciliationFilter, setReconciliationFilter] = useState<ReconciliationFilter>('all');
 
   const filteredInvoices = useMemo(
     () => invoices.filter((inv) => inv.invoice_number.toLowerCase().includes(invoiceSearch.toLowerCase())),
     [invoices, invoiceSearch]
+  );
+
+  // Reconciliation Board lässt sich per Status-Button filtern; erneutes Klicken hebt den Filter wieder auf.
+  const filteredReconciliationInvoices = useMemo(
+    () => invoices.filter((inv) => reconciliationFilter === 'all' || inv.status === reconciliationFilter),
+    [invoices, reconciliationFilter]
   );
 
   // KPI-Berechnungen gemäß Spec 009.
@@ -110,8 +126,20 @@ export const LiveProcess: React.FC = () => {
         {/* Spalte 3: Reconciliation Board */}
         <div className="card" style={{ backgroundColor: '#F0F4F8' }}>
           <h2>Reconciliation Board</h2>
+          <div className="filter-row">
+            {reconciliationFilters.map(({ filter, label, className }) => (
+              <button
+                key={filter}
+                type="button"
+                className={`filter-btn ${className} ${reconciliationFilter === filter ? 'filter-btn-active' : ''}`}
+                onClick={() => setReconciliationFilter((current) => (current === filter ? 'all' : filter))}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           <ul className="ledger-list">
-            {invoices.map((inv) => {
+            {filteredReconciliationInvoices.map((inv) => {
               const label = reconciliationLabel(inv.status);
               const unresolvedBalance = Number(inv.amount) - Number(inv.paid_amount);
               return (
@@ -122,7 +150,11 @@ export const LiveProcess: React.FC = () => {
                 </li>
               );
             })}
-            {invoices.length === 0 && <li className="ledger-empty">Noch keine Rechnungen zum Abgleich.</li>}
+            {filteredReconciliationInvoices.length === 0 && (
+              <li className="ledger-empty">
+                {invoices.length === 0 ? 'Noch keine Rechnungen zum Abgleich.' : 'Keine Rechnungen für diesen Filter.'}
+              </li>
+            )}
           </ul>
         </div>
       </div>

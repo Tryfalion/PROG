@@ -57,6 +57,27 @@ body {
 .status-open { background-color: var(--status-open); }
 .status-warn { background-color: var(--status-warn); }
 
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.filter-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: white;
+  cursor: pointer;
+  opacity: 0.45;
+}
+
+.filter-btn:hover { opacity: 0.7; }
+.filter-btn-active { opacity: 1; }
+
 /* --- Dashboard (Spec 009) --- */
 .kpi-row {
   display: grid;

@@ -92,8 +92,12 @@ verbindet sich standardmaessig mit dem Backend unter <http://localhost:3000>.
 
 ## 5. Anwendung beenden
 
-- Druecke in Terminal 2 und Terminal 3 jeweils `Ctrl+C`.
-- Stoppe danach die Datenbank im Projekt-Hauptordner:
+Die drei Prozesse (Datenbank, Backend, Frontend) werden in der umgekehrten Start-Reihenfolge
+beendet:
+
+1. **Terminal 3 (Frontend):** Klicke ins Terminal und druecke `Ctrl+C`.
+2. **Terminal 2 (Backend):** Klicke ins Terminal und druecke `Ctrl+C`.
+3. **Terminal 1 (Datenbank):** Stoppe den Postgres-Container im Projekt-Hauptordner:
 
 ```powershell
 docker compose stop postgres
@@ -105,6 +109,31 @@ Zum vollstaendigen Zuruecksetzen der Datenbank einschliesslich aller Daten verwe
 ```powershell
 docker compose down -v
 ```
+
+### Wenn `Ctrl+C` nicht (mehr) moeglich ist
+
+Falls ein Terminal-Fenster geschlossen wurde und Backend oder Frontend trotzdem noch im
+Hintergrund laufen (erkennbar z. B. an der Fehlermeldung `AddrInUse` / "Port bereits belegt" beim
+naechsten `cargo run`), koennen die Prozesse direkt per Name beendet werden. Das ist der einfachste
+Weg, ohne das urspruengliche Terminal wiederfinden zu muessen:
+
+```powershell
+# Backend (Rust) beenden:
+Get-Process -Name ledger_gate -ErrorAction SilentlyContinue | Stop-Process -Force
+
+# Frontend (Vite Dev-Server / Node) beenden:
+Get-Process -Name node -ErrorAction SilentlyContinue | Stop-Process -Force
+```
+
+`Get-Process -Name node` beendet **alle** laufenden Node-Prozesse auf dem Rechner - falls parallel
+andere Node-Anwendungen laufen, stattdessen gezielt ueber den blockierten Port suchen und nur
+diesen einen Prozess beenden:
+
+```powershell
+Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force }
+```
+
+(Port `3000` = Backend, `5173` = Frontend - Portnummer im Befehl entsprechend anpassen.)
 
 ## 6. Tests ausfuehren
 
@@ -189,8 +218,17 @@ Status "Running" und wiederhole den Befehl.
 
 ### Ein Port ist bereits belegt
 
-Beende das Programm, das Port 5432, 3000 oder 5173 verwendet, oder stoppe alte LedgerGate-
-Prozesse. Den Status der Compose-Services kannst du so pruefen:
+Wenn `cargo run` mit `error: process didn't exit successfully` und einem Hinweis auf
+`Os { code: 10048, kind: AddrInUse }` abbricht, laeuft bereits eine aeltere Backend-Instanz (zum
+Beispiel aus einem vorherigen, nicht sauber geschlossenen Terminal). Beende sie mit:
+
+```powershell
+Get-Process -Name ledger_gate -ErrorAction SilentlyContinue | Stop-Process -Force
+```
+
+Danach `cargo run` erneut ausfuehren. Siehe Abschnitt 5 ("Wenn `Ctrl+C` nicht mehr moeglich ist")
+fuer weitere Varianten, insbesondere wenn ein anderes Programm (nicht LedgerGate) den Port belegt.
+Den Status der Compose-Services kannst du so pruefen:
 
 ```powershell
 docker compose ps
