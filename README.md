@@ -6,11 +6,16 @@ kleine Teams. Rust/Axum-Backend (N2-Architektur, PostgreSQL, WebSockets) + React
 ## Schnellstart
 
 ```bash
-# 1. Backend + Datenbank starten (Docker; wendet Migrationen automatisch an)
-docker compose up -d postgres
-cd backend && DATABASE_URL="postgres://postgres:postgres@localhost:5432/postgres" cargo run
+# Es müssen 3 gesplittet geöffnete Terminals vorliegen:
 
-# 2. Frontend (separates Terminal) — `corepack pnpm install` ist zwingend,
+# 1. Datenbank starten (Docker; wendet Migrationen automatisch an)
+docker compose up -d postgres 
+
+# 2. Backend starten
+cd backend
+cargo run
+
+# 3. Frontend (separates Terminal) — `corepack pnpm install` ist zwingend,
 #    sonst meldet der Editor "Cannot find module 'react'" etc., weil node_modules/ dann fehlt.
 cd frontend
 corepack pnpm install
